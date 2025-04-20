@@ -54,7 +54,7 @@ beer-game-simulation/
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/your-username/beer-game-simulation.git
+git clone https://github.com/sunaminusone/beer-game-simulation.git
 cd beer-game-simulation
 ```
 
