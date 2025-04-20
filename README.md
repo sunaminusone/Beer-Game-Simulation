@@ -27,5 +27,5 @@ We simulate and evaluate different ordering policies to analyze their impact on 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/Beer-Game-Simulation.git
+git clone https://github.com/haeminusone/Beer-Game-Simulation.git
 cd Beer-Game-Simulation
