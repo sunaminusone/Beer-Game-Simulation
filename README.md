@@ -1,31 +1,123 @@
+```markdown
 # Beer Game Simulation
 
-This project implements a simulation of the classic **Beer Game**, a supply chain management exercise that explores the dynamics of inventory control across four echelons: Retailer, Wholesaler, Distributor, and Factory.
+This project simulates the classic **Beer Game**, a multi-tier supply chain environment, and compares different inventory control strategies in terms of cost and performance.
 
-We simulate and evaluate different ordering policies to analyze their impact on total supply chain cost and dynamics.
+The Beer Game involves four agents — **Retailer**, **Wholesaler**, **Distributor**, and **Factory** — all trying to fulfill customer demand with limited information and time delays. The goal is to manage inventory efficiently and minimize total supply chain cost.
+
+---
 
 ## 📌 Implemented Strategies
 
-1. **One-for-One Policy**  
-   A basic rule-based policy where each agent orders exactly the amount it received from its downstream partner in the previous period.
+- **One-for-One Policy**  
+  A simple rule-based strategy where each agent orders exactly the amount it received from its downstream partner.
 
-2. **GA-Based Policy**  
-   A fixed ordering policy derived from approximate solutions using Genetic Algorithms (based on academic literature).
+- **GA-Based Policy**  
+  A fixed ordering strategy derived from approximate solutions using Genetic Algorithms.
 
-3. **RLOM: Reinforcement Learning Ordering Mechanism**  
-   A Q-learning based policy that learns to minimize total cost over multiple episodes using tabular Q-learning.
+- **RLOM (Reinforcement Learning Ordering Mechanism)**  
+  A tabular Q-learning based policy that learns optimal ordering decisions from interaction with the environment.
 
-4. **DQN (Deep Q-Network)**  
-   A neural network-based RL policy to handle larger state/action spaces and improve generalization.
+- **DQN (Deep Q-Network)**  
+  A deep reinforcement learning agent that uses neural networks to approximate Q-values for scalable decision-making.
 
-## 🛠 File Structure (currently)
+---
 
-- `SCM_using_RLOM.ipynb`: Jupyter notebook implementing the environment and the three policies above.
+## 🛠 Project Structure
+
+```
+beer-game-simulation/
+├── LICENSE                     # MIT License
+├── README.md                   # Project documentation
+├── requirements.txt            # Python dependencies
+├── src/
+│   ├── environment/
+│   │   └── supply_chain_env.py     # Core Beer Game environment
+│   ├── agents/                     # Agent implementations
+│   │   ├── one_for_one.py
+│   │   ├── ga_based.py
+│   │   ├── rlom.py
+│   │   └── dqn.py
+│   └── utils/
+│       └── visualizer.py          # Visualization helper functions
+├── experiments/
+│   └── compare_policies.py        # Script for running simulations
+├── notebooks/
+│   └── SCM_using_RLOM.ipynb       # Jupyter notebook for prototyping
+└── results/
+    └── .gitkeep                   # Placeholder for output files
+```
+
+---
 
 ## 🚀 Getting Started
 
-1. Clone the repository:
+1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/haeminusone/Beer-Game-Simulation.git
-cd Beer-Game-Simulation
+git clone https://github.com/your-username/beer-game-simulation.git
+cd beer-game-simulation
+```
+
+2. **Install dependencies:**
+
+```bash
+pip install -r requirements.txt
+```
+
+3. **Run the experiment:**
+
+```bash
+python experiments/compare_policies.py
+```
+
+4. *(Optional)* Launch the notebook:
+
+```bash
+jupyter notebook notebooks/SCM_using_RLOM.ipynb
+```
+
+---
+
+## 📦 Requirements
+
+Minimal dependencies:
+
+```
+numpy
+matplotlib
+```
+
+If you're using the DQN strategy, additional requirements may include:
+
+```
+torch
+gym
+```
+
+These can be added in `requirements.txt`.
+
+---
+
+## 📈 Future Improvements
+
+- Add interactive visualization for inventory and orders
+- Tune DQN hyperparameters and architecture
+- Implement multi-agent reinforcement learning (MARL)
+- Dockerize for reproducibility
+
+---
+
+## 📄 License
+
+This project is licensed under the terms of the [MIT License](./LICENSE).
+
+---
+
+## 🤝 Contributions
+
+Contributions are welcome! Please feel free to open issues or submit pull requests.
+
+---
+```
+
