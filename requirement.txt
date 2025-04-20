@@ -1,0 +1,8 @@
+numpy>=1.22
+matplotlib>=3.5
+notebook
+torch>=1.12
+gym==0.26.2
+stable-baselines3>=2.0.0
+tqdm
+scipy>=1.8
