@@ -1,5 +1,4 @@
-```markdown
-# Beer Game Simulation
+## Beer Game Simulation
 
 This project simulates the classic **Beer Game**, a multi-tier supply chain environment, and compares different inventory control strategies in terms of cost and performance.
 
