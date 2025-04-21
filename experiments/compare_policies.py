@@ -6,6 +6,7 @@ from src.environment.supply_chain_env import SupplyChainEnvironment
 from src.agents.rlom import RLOrderingMechanism
 from src.agents.one_for_one import OneForOnePolicy
 from src.agents.ga_based import GABasedPolicy
+from src.agents.dqn import DQNPolicy
 from src.utils.visualizer import (
     plot_inventory,
     plot_orders,
@@ -43,12 +44,15 @@ def main():
     # Evaluate One-for-One
     results.append(evaluate_strategy("1-for-1", OneForOnePolicy, env_class))
 
+    # Evaluate DQN
+    results.append(evaluate_strategy("DQN", DQNPolicy, env_class))
+
     # Visualize
     for name, cost, log in results:
         plot_inventory(log, name)
         plot_orders(log, name)
         plot_period_costs(log, name)
-        
+
    # Optional: summary bar chart of total costs
     plot_total_costs({name: cost for name, cost, _ in results})
 
