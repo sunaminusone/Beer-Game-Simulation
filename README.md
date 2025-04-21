@@ -1,3 +1,4 @@
+```markdown
 # 🍺 Beer Game Simulation
 
 Welcome to the **Beer Game Simulation**, a supply chain modeling project that compares different inventory ordering policies under the classic beer game scenario.
@@ -18,6 +19,7 @@ This project explores how different strategies manage the **bullwhip effect**, t
 | 🤖 **RLOM**         | Reinforcement Learning Ordering Mechanism using Q-learning                 |
 | 🧬 **GA-Based**     | Fixed policy derived from a Genetic Algorithm approximation                |
 | 🔁 **1-for-1**      | Classic policy: order exactly what was received from downstream            |
+| 🧠 **DQN**          | Deep Q-Network strategy with function approximation for large state spaces |
 
 ---
 
@@ -35,15 +37,20 @@ This will generate interactive Plotly visualizations and save them to the `resul
 
 ---
 
-## 📊 Visualizations (saved as .html)
+## 📊 Visualizations (saved as `.html`)
 
-- 📦 `inventory.html` — Inventory Over Time by Role
-- 🛍️ `orders.html` — Orders Over Time by Role
-- 💸 `costs.html` — Period Costs Over Time
-- 🧾 `total_costs_comparison.html` — Bar chart of total cost across strategies
-- 📈 `cumulative_costs_over_time.html` — Line chart of cost accumulation over time
+All output plots are interactive and saved in `results/`:
 
-All files are saved in `results/` and can be opened in any browser.
+| Filename                                | Description                               |
+|-----------------------------------------|-------------------------------------------|
+| 📦 `rlom_inventory.html`                | Inventory Over Time — RLOM                |
+| 🛍️ `ga-based_orders.html`              | Orders Over Time — GA-Based               |
+| 💸 `1-for-1_costs.html`                 | Period Costs — 1-for-1                    |
+| 📈 `cumulative_costs_over_time.html`    | Line chart of cumulative costs            |
+| 📊 `total_costs_comparison.html`        | Total cost comparison across strategies   |
+| ...                                     | (Similar files generated per strategy)    |
+
+You can open any of them in your browser to explore the results interactively 🌐
 
 ---
 
@@ -56,6 +63,10 @@ Beer-Game-Simulation/
 ├── .gitignore
 ├── src/
 │   ├── agents/           # Strategy implementations
+│   │   ├── one_for_one.py
+│   │   ├── ga_based.py
+│   │   ├── rlom.py
+│   │   └── dqn.py        # ✅ Newly added DQN strategy
 │   ├── environment/      # SupplyChainEnvironment definition
 │   └── utils/            # Visualization and helper functions
 ├── experiments/
@@ -74,6 +85,7 @@ Main libraries used:
 - `pandas`
 - `plotly`
 - `collections` (for Q-table)
+- `torch` (for DQN)
 - `matplotlib` (optional)
 
 Install all with:
@@ -86,7 +98,7 @@ pip install -r requirements.txt
 
 ## 👩‍💻 Author
 
-Made with ❤️ by [sunaminusone](https://github.com/sunaminusone)  
+Made with ❤️ by [@sunaminusone](https://github.com/sunaminusone)  
 Berkeley | INDENG 230 · Spring 2024  
 Let’s beat the bullwhip effect together!
 
@@ -96,6 +108,8 @@ Let’s beat the bullwhip effect together!
 
 This project is open source under the MIT License.  
 Feel free to use, modify, and share!
+```
+
 
 
 
