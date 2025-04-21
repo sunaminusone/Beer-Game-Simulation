@@ -1,5 +1,4 @@
-```markdown
-# 🍺 Beer Game Simulation
+## 🍺 Beer Game Simulation
 
 Welcome to the **Beer Game Simulation**, a supply chain modeling project that compares different inventory ordering policies under the classic beer game scenario.
 
