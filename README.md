@@ -97,7 +97,7 @@ pip install -r requirements.txt
 
 ## 👩‍💻 Author
 
-Made with ❤️ by [@sunaminusone](https://github.com/sunaminusone)  
+Made with ❤️ by [@sunaminusone](https://github.com/sunaminusone) [@Atharv-R](https://github.com/Atharv-R) [@ji-ho75](https://github.com/ji-ho75)  
 Berkeley | INDENG 230 · Spring 2024  
 Let’s beat the bullwhip effect together!
 
